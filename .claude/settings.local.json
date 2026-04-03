@@ -1,6 +1,23 @@
 {
   "permissions": {
-    "allow": ["mcp__playwright"],
+    "allow": [
+      "mcp__playwright",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
     "deny": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./hooks/read_hook.js"
+          }
+        ]
+      }
+    ]
   }
 }
