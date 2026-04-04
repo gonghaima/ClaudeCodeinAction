@@ -4,7 +4,12 @@
       "mcp__playwright",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:anthropic.skilljar.com)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
     ],
     "deny": []
   },
