@@ -1,0 +1,1 @@
+Code editor panel. CodeEditor wraps Monaco editor for editing selected files. FileTree renders the virtual file system tree allowing users to select and navigate files. Both read/write file state from FileSystemContext.

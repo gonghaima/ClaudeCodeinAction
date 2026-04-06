@@ -1,0 +1,1 @@
+POST /api/chat — deserializes file state, builds the AI tools, calls streamText with the Claude model, streams the response back, and saves final state to DB in onFinish. Runs up to 40 tool-call steps per request.

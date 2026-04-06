@@ -1,0 +1,1 @@
+src/lib/contexts/chat-context.tsx — wraps Vercel AI SDK's useChat hook. Manages message history, loading state, and the POST to /api/chat. Serializes the current VirtualFileSystem state into the request body alongside the message history.

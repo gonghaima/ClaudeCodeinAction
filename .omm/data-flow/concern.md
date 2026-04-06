@@ -1,0 +1,3 @@
+- The entire VirtualFileSystem is serialized on every request, growing unboundedly as projects add files.
+- Tool results are stringified and sent back to Claude as text, so large file contents inflate token usage and latency.
+- Client FileSystemContext is the source of truth during a session; DB is only updated on finish, creating a divergence window.

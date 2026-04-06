@@ -1,0 +1,1 @@
+Project workspace at /[projectId]. Renders the three-panel layout (chat, editor, preview) using react-resizable-panels. Loads project data server-side via getProject action and passes it to the ChatProvider and FileSystemProvider contexts.

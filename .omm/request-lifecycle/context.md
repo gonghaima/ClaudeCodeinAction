@@ -1,0 +1,1 @@
+The API route uses maxSteps: 40 (4 for mock) to allow Claude to make multiple sequential tool calls in a single user turn — e.g., creating multiple files. The stream uses Vercel AI SDK's toDataStreamResponse() for real-time delta delivery. System prompt is prepended with Anthropic prompt caching enabled.

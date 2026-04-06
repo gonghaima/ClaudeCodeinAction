@@ -1,0 +1,1 @@
+Landing page listing the user's projects. Authenticated users see saved projects from the DB; anonymous users see a prompt to create a new project. Renders project cards and links to the project workspace.

@@ -1,0 +1,1 @@
+Next.js server actions in src/actions/. Handles auth (login, register, logout via src/actions/index.ts) and project CRUD (createProject, getProject, getProjects). Called from client components and pages; interact with Prisma for DB reads/writes and jose for JWT management.

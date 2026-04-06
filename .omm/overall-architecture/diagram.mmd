@@ -1,0 +1,21 @@
+graph LR
+    browser["Browser\n(user interface)"]
+    browser -->|"renders pages"| next-app["Next.js App\nsrc/app/"]
+    browser -->|"interacts via"| components["UI Components\nsrc/components/"]
+    components -->|"reads/writes state via"| contexts["React Contexts\nsrc/lib/contexts/"]
+    contexts -->|"POST /api/chat"| api-chat["AI Chat API\nsrc/app/api/chat/route.ts"]
+    api-chat -->|"streams via"| ai-provider["AI Provider\nsrc/lib/provider.ts"]
+    ai-provider -->|"calls"| anthropic["Anthropic Claude\n(external API)"]
+    api-chat -->|"executes"| ai-tools["AI Tools\nsrc/lib/tools/"]
+    ai-tools -->|"reads/writes"| vfs["Virtual File System\nsrc/lib/file-system.ts"]
+    api-chat -->|"saves state"| db["SQLite DB\nprisma/dev.db"]
+    next-app -->|"server actions"| actions["Server Actions\nsrc/actions/"]
+    actions -->|"reads/writes"| db
+    components -->|"compiles JSX via"| transform["JSX Transformer\nsrc/lib/transform/"]
+
+    classDef external fill:#585b70,stroke:#585b70,color:#cdd6f4
+    classDef store fill:#a6e3a1,stroke:#a6e3a1,color:#1e1e2e
+    classDef entry fill:#89b4fa,stroke:#89b4fa,color:#1e1e2e
+    class anthropic external
+    class db store
+    class api-chat entry

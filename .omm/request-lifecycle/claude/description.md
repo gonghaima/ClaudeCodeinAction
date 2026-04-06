@@ -1,0 +1,1 @@
+External Anthropic Claude claude-haiku-4-5 model. Receives the system prompt (with component generation instructions) and conversation history, then emits a mix of text deltas and tool_use calls to create and modify files.

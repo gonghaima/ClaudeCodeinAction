@@ -1,0 +1,15 @@
+graph LR
+    home-page["Home Page\nsrc/app/page.tsx"]
+    project-page["Project Workspace\nsrc/app/[projectId]/page.tsx"]
+    layout["App Layout\nsrc/app/layout.tsx"]
+    api-chat["Chat API Route\nsrc/app/api/chat/route.ts"]
+    middleware["Middleware\nsrc/middleware.ts"]
+
+    layout -->|"wraps"| home-page
+    layout -->|"wraps"| project-page
+    middleware -->|"guards"| api-chat
+    home-page -->|"navigates to"| project-page
+    project-page -->|"calls"| api-chat
+
+    classDef entry fill:#89b4fa,stroke:#89b4fa,color:#1e1e2e
+    class home-page,project-page entry

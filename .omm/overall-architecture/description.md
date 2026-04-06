@@ -1,0 +1,1 @@
+UIGen is a Next.js 15 app that lets users generate React components via Claude AI. The browser renders a project workspace where users chat with an AI that writes and edits files in a virtual file system, with a live preview rendered in an isolated iframe.

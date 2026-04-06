@@ -1,0 +1,1 @@
+Live preview panel. PreviewFrame renders user-generated React components inside an isolated iframe. Uses @babel/standalone to compile JSX client-side, injects Tailwind CDN and the compiled component into the iframe srcdoc, and re-renders on every file change from FileSystemContext.

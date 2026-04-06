@@ -1,0 +1,28 @@
+graph LR
+    user-input["User Input\nMessageInput.tsx"]
+    chat-context["Chat Context\nsrc/lib/contexts/chat-context.tsx"]
+    api-endpoint["POST /api/chat\nsrc/app/api/chat/route.ts"]
+    claude["Claude claude-haiku-4-5\nexternal"]
+    tool-execution["Tool Execution\nsrc/lib/tools/"]
+    vfs["Virtual File System\nsrc/lib/file-system.ts"]
+    db-save["DB Persistence\nprisma/dev.db"]
+    stream-response["Streamed Response\nVercel AI SDK"]
+    preview["Preview Render\nsrc/components/preview/PreviewFrame.tsx"]
+
+    user-input -->|"submits message"| chat-context
+    chat-context -->|"POST with messages + files"| api-endpoint
+    api-endpoint -->|"streamText with tools"| claude
+    claude -->|"tool_use call"| tool-execution
+    tool-execution -->|"mutates"| vfs
+    tool-execution -->|"result returned to"| claude
+    claude -->|"text/tool stream"| stream-response
+    stream-response -->|"updates UI"| chat-context
+    api-endpoint -->|"onFinish: save state"| db-save
+    chat-context -->|"file updates trigger"| preview
+
+    classDef external fill:#585b70,stroke:#585b70,color:#cdd6f4
+    classDef store fill:#a6e3a1,stroke:#a6e3a1,color:#1e1e2e
+    classDef entry fill:#89b4fa,stroke:#89b4fa,color:#1e1e2e
+    class claude external
+    class db-save,vfs store
+    class user-input entry

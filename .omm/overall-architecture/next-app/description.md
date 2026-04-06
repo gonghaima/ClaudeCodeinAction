@@ -1,0 +1,1 @@
+Next.js 15 App Router. Hosts the home page (project list), the project workspace page at /[projectId], and the /api/chat streaming endpoint. Uses layout.tsx for global providers and middleware.ts for route protection.

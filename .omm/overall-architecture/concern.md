@@ -1,0 +1,3 @@
+- Virtual file system is in-memory only during streaming; if the server restarts mid-stream, file state is lost before the onFinish DB save.
+- Anonymous project state is not persisted (no DB save without auth), so users lose work on refresh.
+- JSX compilation happens client-side in the preview iframe using Babel standalone, which adds significant bundle weight.

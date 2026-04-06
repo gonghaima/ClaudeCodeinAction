@@ -1,0 +1,1 @@
+The user's web browser. Renders the Next.js React app, hosts the Monaco editor, runs @babel/standalone for JSX compilation in the preview iframe, and streams responses from /api/chat via the Vercel AI SDK useChat hook.

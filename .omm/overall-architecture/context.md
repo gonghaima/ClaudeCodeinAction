@@ -1,0 +1,1 @@
+Built with Next.js 15 App Router, Vercel AI SDK, Prisma/SQLite, Monaco editor, and Babel standalone for in-browser JSX compilation. Auth is JWT-based with HTTP-only cookies. Anonymous users can use the app without signing up; authenticated users get DB persistence.

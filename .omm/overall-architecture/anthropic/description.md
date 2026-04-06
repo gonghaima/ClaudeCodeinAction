@@ -1,0 +1,1 @@
+External Anthropic Claude API (claude-haiku-4-5 model). Receives streamed generation requests from the AI Chat API via @ai-sdk/anthropic. Returns tool calls (str_replace_editor, file_manager) and text responses streamed back to the client.

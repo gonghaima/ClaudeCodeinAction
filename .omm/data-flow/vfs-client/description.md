@@ -1,0 +1,1 @@
+Client-side FileSystemContext (React state). Initialized from the project's DB data on page load. Updated as tool results arrive in the stream. Source of truth for the Monaco editor and the preview iframe during a session.

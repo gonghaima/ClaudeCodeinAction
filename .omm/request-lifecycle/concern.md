@@ -1,0 +1,3 @@
+- If the server process dies mid-stream, the VirtualFileSystem state is lost because onFinish never fires and the DB save is skipped.
+- The entire file system is serialized and sent in every request body, which grows linearly with project size.
+- maxDuration is 120s; long generation runs risk timeout on serverless deployments.

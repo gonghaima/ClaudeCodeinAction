@@ -1,0 +1,1 @@
+FileSystemContext file change detected by PreviewFrame.tsx. @babel/standalone recompiles the entry JSX; the iframe srcdoc is replaced. Can happen multiple times during a single streaming response as Claude creates/edits files.

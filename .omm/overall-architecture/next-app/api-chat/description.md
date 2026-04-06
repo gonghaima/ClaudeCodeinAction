@@ -1,0 +1,1 @@
+POST /api/chat streaming endpoint. Receives messages + file state, streams Claude responses via Vercel AI SDK, executes str_replace_editor and file_manager tools against the in-memory VirtualFileSystem, and saves final state to the DB on finish.

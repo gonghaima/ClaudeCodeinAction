@@ -1,0 +1,1 @@
+A tool_use block was emitted by Claude. The Vercel AI SDK executes the str_replace_editor or file_manager handler synchronously, mutating the VirtualFileSystem. FileSystemContext is updated, which may trigger a preview re-render.

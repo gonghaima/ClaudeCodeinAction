@@ -1,0 +1,1 @@
+Next.js middleware protecting /api/projects and /api/filesystem routes. Verifies JWT session on each request and returns 401 if unauthenticated. Does not block /api/chat, allowing anonymous generation.

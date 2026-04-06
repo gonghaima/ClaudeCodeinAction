@@ -1,0 +1,1 @@
+Prisma update on the Project record in onFinish callback. Saves serialized message history (Project.messages) and VirtualFileSystem state (Project.data). Only runs when projectId is present and the user is authenticated.

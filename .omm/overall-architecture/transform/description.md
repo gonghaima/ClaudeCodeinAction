@@ -1,0 +1,1 @@
+src/lib/transform/jsx-transformer.ts — client-side JSX compilation using @babel/standalone. Transforms user-generated React component source into executable JavaScript for injection into the preview iframe. Also handles module resolution within the virtual file system.

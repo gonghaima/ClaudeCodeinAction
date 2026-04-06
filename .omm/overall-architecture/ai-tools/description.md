@@ -1,0 +1,1 @@
+Two AI tool implementations called by Claude during generation. str_replace_editor (src/lib/tools/str-replace.ts) supports view/create/str_replace/insert commands for editing virtual files. file_manager (src/lib/tools/file-manager.ts) handles rename and delete of files and directories in the VirtualFileSystem.

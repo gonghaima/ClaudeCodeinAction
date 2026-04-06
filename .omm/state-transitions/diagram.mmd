@@ -1,0 +1,20 @@
+graph TD
+    idle["Idle\n(no request in flight)"]
+    streaming["Streaming\n(AI response in progress)"]
+    tool-running["Tool Running\n(file mutation)"]
+    preview-updating["Preview Updating\n(recompiling JSX)"]
+    saved["Saved\n(DB write complete)"]
+
+    idle -->|"user submits message"| streaming
+    streaming -->|"Claude emits tool_use"| tool-running
+    tool-running -->|"tool result returned"| streaming
+    streaming -->|"file change event"| preview-updating
+    preview-updating -->|"iframe updated"| streaming
+    streaming -->|"onFinish fires"| saved
+    saved -->|"user submits next message"| streaming
+    streaming -->|"error or abort"| idle
+
+    classDef entry fill:#89b4fa,stroke:#89b4fa,color:#1e1e2e
+    classDef store fill:#a6e3a1,stroke:#a6e3a1,color:#1e1e2e
+    class idle entry
+    class saved store

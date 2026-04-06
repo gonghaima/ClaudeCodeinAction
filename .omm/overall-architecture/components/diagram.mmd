@@ -1,0 +1,13 @@
+graph LR
+    chat-ui["Chat UI\nsrc/components/chat/"]
+    editor-ui["Editor UI\nsrc/components/editor/"]
+    preview-ui["Preview UI\nsrc/components/preview/"]
+    auth-ui["Auth UI\nsrc/components/auth/"]
+    ui-primitives["UI Primitives\nsrc/components/ui/"]
+
+    chat-ui -->|"uses"| ui-primitives
+    editor-ui -->|"uses"| ui-primitives
+    auth-ui -->|"uses"| ui-primitives
+    chat-ui -->|"reads/sends messages via"| contexts["React Contexts\nsrc/lib/contexts/"]
+    editor-ui -->|"reads/writes files via"| contexts
+    preview-ui -->|"reads files via"| contexts

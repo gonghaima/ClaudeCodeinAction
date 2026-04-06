@@ -1,0 +1,1 @@
+Server-side VirtualFileSystem instance created per request by deserializing the incoming files JSON. Lives only for the duration of the streaming response; mutated by AI tool calls and serialized back to DB on finish.

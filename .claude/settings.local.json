@@ -9,7 +9,10 @@
       "Bash(npm list:*)",
       "Bash(npm install:*)",
       "Skill(claude-api)",
-      "Skill(claude-api:*)"
+      "Skill(claude-api:*)",
+      "Bash(command -v omm)",
+      "Bash(omm config:*)",
+      "Bash(omm write:*)"
     ],
     "deny": []
   },

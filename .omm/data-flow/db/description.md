@@ -1,0 +1,1 @@
+SQLite Project record. Stores messages as JSON string and files (VirtualFileSystem) as JSON string in the data column. Written by the /api/chat onFinish callback; read by the getProject server action when loading the workspace.

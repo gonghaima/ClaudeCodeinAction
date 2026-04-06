@@ -1,0 +1,1 @@
+Return values from str_replace_editor and file_manager tool calls. String messages describing the operation result (e.g., "File created successfully"). Fed back to Claude as tool_result blocks to inform the next generation step.

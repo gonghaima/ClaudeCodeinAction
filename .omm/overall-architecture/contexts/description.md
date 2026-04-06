@@ -1,0 +1,1 @@
+React context providers managing shared client-side state. ChatContext manages the message history and streaming state for the conversation. FileSystemContext manages the virtual file system state, selected file, and exposes mutation methods used by both the editor and the chat API response handler.

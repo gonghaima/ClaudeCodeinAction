@@ -1,0 +1,10 @@
+graph TD
+    root["/\nHome Page\nsrc/app/page.tsx"]
+    project["/[projectId]\nProject Workspace\nsrc/app/[projectId]/page.tsx"]
+    api-chat["/api/chat\nPOST — AI stream\nsrc/app/api/chat/route.ts"]
+
+    root -->|"click project card"| project
+    project -->|"POST (fetch)"| api-chat
+
+    classDef entry fill:#89b4fa,stroke:#89b4fa,color:#1e1e2e
+    class root,project entry

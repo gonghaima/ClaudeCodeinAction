@@ -1,0 +1,1 @@
+PreviewFrame.tsx watches FileSystemContext for changes. On change, compiles the entry file JSX with @babel/standalone, wraps it in an HTML shell with Tailwind CDN, and sets it as the iframe srcdoc for an isolated live preview.

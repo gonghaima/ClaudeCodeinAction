@@ -1,0 +1,3 @@
+- ANTHROPIC_API_KEY must be set for real AI responses; omitting it activates a mock provider that returns a static placeholder component.
+- Node.js 25+ compatibility requires node-compat.cjs loaded via NODE_OPTIONS to remove globalThis.localStorage/sessionStorage in server context.
+- JWT secret defaults to a hardcoded dev value; must be overridden via JWT_SECRET in production.

@@ -1,0 +1,1 @@
+JSON payload sent to POST /api/chat containing: messages (full conversation history), files (serialized VirtualFileSystem nodes), and projectId. Assembled by ChatContext from the Vercel AI SDK useChat body option.

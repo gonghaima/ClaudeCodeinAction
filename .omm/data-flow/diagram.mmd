@@ -1,0 +1,22 @@
+graph LR
+    user-message["User Message\n(browser input)"]
+    request-body["Request Body\nJSON: messages + files"]
+    vfs-server["VirtualFileSystem\n(server, in-memory)"]
+    ai-tool-results["Tool Results\n(str_replace / file_manager)"]
+    stream-delta["Stream Deltas\n(Vercel AI SDK)"]
+    vfs-client["FileSystem Context\n(client state)"]
+    db["SQLite Project\nprisma/dev.db"]
+    preview-iframe["Preview Iframe\n(browser)"]
+
+    user-message -->|"serialized into"| request-body
+    request-body -->|"deserialized to"| vfs-server
+    vfs-server -->|"read by Claude tools"| ai-tool-results
+    ai-tool-results -->|"mutate"| vfs-server
+    vfs-server -->|"serialized in stream"| stream-delta
+    stream-delta -->|"updates"| vfs-client
+    vfs-client -->|"file content piped to"| preview-iframe
+    vfs-server -->|"saved on finish"| db
+    db -->|"loaded on page open"| vfs-client
+
+    classDef store fill:#a6e3a1,stroke:#a6e3a1,color:#1e1e2e
+    class db,vfs-server,vfs-client store

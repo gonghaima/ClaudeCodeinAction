@@ -1,0 +1,1 @@
+Tracks how data moves through UIGen: from user input, through serialization into request bodies, through server-side AI tool mutations of the VirtualFileSystem, back via stream deltas to client state, and into the preview iframe. Also covers the DB persistence path for authenticated users.

@@ -1,0 +1,1 @@
+src/lib/provider.ts selects the language model. If ANTHROPIC_API_KEY is present, returns claude-haiku-4-5 via @ai-sdk/anthropic. Otherwise returns a mock provider that generates a static placeholder component without calling the Anthropic API.

@@ -1,0 +1,1 @@
+src/lib/file-system.ts — in-memory VirtualFileSystem backed by a Map. Stores file content and directory structure. Serializes to/from JSON for DB storage. Mutated exclusively by AI tool calls during streaming; read by the preview and editor via FileSystemContext.

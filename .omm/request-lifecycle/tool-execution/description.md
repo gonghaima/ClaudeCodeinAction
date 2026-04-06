@@ -1,0 +1,1 @@
+str_replace_editor and file_manager tool handlers in src/lib/tools/. Called synchronously by the Vercel AI SDK when Claude emits a tool_use block. Each call mutates the in-memory VirtualFileSystem and returns a result string back to Claude for the next step.

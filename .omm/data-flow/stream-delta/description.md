@@ -1,0 +1,1 @@
+Server-sent event stream from toDataStreamResponse(). Carries text deltas, tool call events, and tool result events. Consumed by the Vercel AI SDK useChat hook in the browser to update message list and trigger file system context updates.

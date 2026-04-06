@@ -1,0 +1,1 @@
+/[projectId] — main workspace. Three-panel resizable layout: left (chat), center (Monaco editor + file tree), right (live preview). Project data loaded server-side; providers initialized with messages and file state from DB.

@@ -1,0 +1,1 @@
+SQLite database at prisma/dev.db via Prisma ORM. Two models: User (id, email, bcrypt-hashed password) and Project (id, name, userId, messages JSON, data JSON). Project.data stores the serialized VirtualFileSystem; Project.messages stores the full conversation history.

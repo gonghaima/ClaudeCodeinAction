@@ -1,0 +1,1 @@
+Chat conversation panel. ChatInterface orchestrates MessageList (renders conversation history with markdown), MessageInput (textarea + send button), and MarkdownRenderer (syntax-highlighted code blocks). Streams AI responses from /api/chat via the ChatContext.

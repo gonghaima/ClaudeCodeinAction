@@ -1,0 +1,1 @@
+Isolated iframe in PreviewFrame.tsx. Receives compiled JavaScript (from Babel standalone transform of the VFS entry file) injected via srcdoc. Re-rendered on every file change; sandboxed to prevent access to parent document.

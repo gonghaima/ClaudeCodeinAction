@@ -1,0 +1,1 @@
+End-to-end lifecycle of a user generation request. User types a prompt → ChatContext POSTs to /api/chat → Vercel AI SDK streamText calls Claude → Claude emits tool calls → tools mutate the VirtualFileSystem → results feed back to Claude → stream updates the UI in real time → on finish, state is saved to SQLite → file changes trigger a preview re-render.
